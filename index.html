@@ -1,0 +1,1710 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ひろしまAI部</title>
+    <meta name="description" content="うちらのThird Place（サードプレイス）-主役は高校生。身につけた新たな技術でカタチづくる未来。それを支えるのは若きコーチ陣。未来デザイン空間「ひろしまAI部」">
+
+    <!-- ogp -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="ひろしまAI部">
+    <meta property="og:description" content="うちらのThird Place（サードプレイス）-主役は高校生。身につけた新たな技術でカタチづくる未来。それを支えるのは若きコーチ陣。未来デザイン空間「ひろしまAI部」">
+    <meta property="og:url" content="https://hiroshima-aiclub.org/">
+    <meta property="og:image" content="https://hiroshima-aiclub.org/img/ogp-img_20240611-2.jpg">
+    <meta property="og:site_name" content="ひろしまAI部">
+    <meta property="og:locale" content="ja_JP">
+
+    <!-- faviconの設定 -->
+    <link rel="shortcut icon" href="img/favicons/favicon.ico" type="image/x-icon">
+    <link rel="icon" type="image/vnd.microsoft.icon" href="img/favicons/favicon.ico">
+    <link rel="icon" type="image/png" href="img/favicons/icon-16x16.png" sizes="16x16">
+    <link rel="icon" type="image/png" href="img/favicons/icon-24x24.png" sizes="24x24">
+    <link rel="icon" type="image/png" href="img/favicons/icon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="img/favicons/icon-48x48.png" sizes="48x48">
+    <link rel="apple-touch-icon" href="img/favicons/apple-touch-icon-180x180.png">
+    <link rel="icon" href="img/favicons/android-chrome-192x192.png" sizes="192x192">
+    <meta name="msapplication-TileImage" content="img/favicons/mstile-144x144.png">
+
+    <link rel="stylesheet" href="css/style.min.css?v=1.0.11">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@200;500&family=Raleway:ital,wght@0,900;1,900&display=swap" rel="stylesheet">
+
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+
+    <script>
+        // HTMLドキュメントの解析後に実行
+        window.addEventListener('DOMContentLoaded', function() {
+            // XMLHttpRequestのインスタンスを作成
+            var req = new XMLHttpRequest();
+            
+            // 読み込み時の処理を設定
+            req.onreadystatechange = function() {
+                // readyState=4は全てのデータを受信済み、
+                // status=200は正常に処理されたことを意味します
+                if( req.readyState == 4 && req.status == 200 ) {
+                    // 結果を代入
+                    document.getElementById( "news__list" ).innerHTML = req.responseText;
+                }
+            }
+            
+            // 接続先のURLやメソッドを設定します
+            req.open( "GET", "output-img_rss.php" );
+            
+            // リクエストをサーバに送信
+            req.send();
+            
+        });
+    </script>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WC8GGE1GTW"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'G-WC8GGE1GTW');
+    </script>
+
+</head>
+<body>
+    <header id="header" class="header">
+        <div class="header__inner">
+            <div class="header__logo">
+                <h1><a href="index.html"><img src="img/logo.svg" width="200" height="55" alt="ひろしまAI部" loading="eager"></a></h1>
+            </div>
+            <div class="header__menu">
+                <div class="btn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <em>MENU</em>
+                </div>
+                <ul class="header__menu__list">
+                    <li><a href="#main">トップ</a></li>
+                    <li><a href="#news">お知らせ</a></li>
+                    <li>
+                        <a href="#ai-club">ひろしまAI部</a>
+                        <ul>
+                            <li><a href="#program">プログラム</a></li>
+                            <li><a href="#schedule">スケジュール</a></li>
+                            <li><a href="#member">部員紹介</a></li>
+                            <li><a href="#coach">コーチ紹介</a></li>
+                            <li><a href="#flow">入部手続き</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#consortium">ひろしまAI部運営コンソーシアム</a>
+                        <ul>
+                            <li><a href="#system">ひろしまAI部とは</a></li>
+                            <li><a href="#participant">参加企業・団体</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#faq">よくあるご質問</a></li>
+                    <li><a href="#footer">運営・事務局</a></li>
+                    <li class="login"><a href="https://portal.hiroshima-aiclub.org/" target="_blank" rel="noopener"><span>ひろしまAI部メンバー専用サイト<br>【ログイン】</span></a></li>
+                </ul>
+            </div>
+        </div>
+    </header><!-- #header -->
+    <main id="main">
+        <div class="fv">
+            <video id="fvVideo" autoplay muted playsinline>
+                <source src="img/fv-movie.mp4" type="video/mp4">
+            </video>
+            <script>
+                window.addEventListener('DOMContentLoaded', (event) => {
+                    function checkScreenSize() {
+                        var fvVideo = document.getElementById('fvVideo');
+                        var timestamp = new Date().getTime();
+                        var width = window.innerWidth
+                        || document.documentElement.clientWidth 
+                        || document.body.clientWidth;
+                        if (width <= 480) {
+                            fvVideo.innerHTML = '<source src="img/fv-movie-sp.mp4?time=' + timestamp + '" type="video/mp4">';
+                        } else {
+                            fvVideo.innerHTML = '<source src="img/fv-movie.mp4?time=' + timestamp + '" type="video/mp4">';
+                        }
+                        // fvVideo.innerHTML = '<source src="img/fv-movie.mp4?time=' + timestamp + '" type="video/mp4">';
+                        // 忘れずに動画を再読み込みする
+                        fvVideo.load();
+                    }
+                    // ページロード時にスクリーンサイズをチェック
+                    checkScreenSize();
+                    // ウィンドウサイズの変更を監視
+                    window.addEventListener('orientationchange', checkScreenSize);
+                });
+            </script>
+            <div class="scroll">SCROLL</div>
+        </div><!-- .fv -->
+        <div class="about" id="about">
+            <h2>うちらの<em>Third Place</em><span>（サードプレイス）</span></h2>
+            <p>主役は<svg class="about__svg about__svg1"><text x="0" y="90%">高校生</text></svg>。</p>
+            <p>身につけた新たな技術でカタチづくる未来。</p>
+            <p>それを支えるのは<svg class="about__svg about__svg2"><text x="0" y="90%">若きコーチ陣</text></svg>。</p>
+            <p>未来デザイン空間<svg class="about__svg about__svg3"><text x="0" y="90%">「ひろしまAI部」</text></svg></p>
+        </div><!-- .about -->
+
+        <div class="about__youtube">
+            <div class="about__youtube__inner">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/7-53rol_YQc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen title="ひろしまAI部とは" loading="lazy"></iframe>
+            </div>
+        </div><!-- .about_youtube -->
+
+        <!--
+        <div class="ai-pitch">
+            <a href="https://note.com/hiroshima_aiclub/n/nabb0f5f0b6e3" target="_blank" rel="noopener">
+                <picture>
+                    <source media="(max-width: 600px)" type="image/jpg" srcset="img/ai-pitch-banner-2025-sp.jpg" width="600" height="320">
+                    <img src="img/ai-pitch-banner-2025-pc.jpg" width="960" height="310" alt="HIROSHIMA AI PITCH 広島から未来を切り拓け！アッと驚く！AIアイデア提案に挑戦しよう！ 2025年3月27日" loading="lazy">
+                </picture>
+            </a>
+        </div>
+       -->
+
+        <div id="news">
+            <div class="news__inner">
+                <div class="news__title">
+                    <em class="TextTyping">NEWS</em>
+                    <h2>お知らせ</h2>
+                </div>
+                <!-- <ul id="news__list" class="news__list">
+                    <li><time>2024.6.10</time><p>ひろしまAI部 サイト開設しました。</p></li>
+                </ul> -->
+                <div class="news__list-img news__list-swiper"><div id="news__list" class="swiper-wrapper"></div></div>
+                <div class="swiper-button-prev news-swiper-button-prev"></div>
+                <div class="swiper-button-next news-swiper-button-next"></div>
+                <div class="news__link active"><a href="https://note.com/hiroshima_aiclub/" target="_blank" rel="noopener"><span>お知らせ一覧</span></a></div>
+            </div>
+        </div><!-- #news -->
+        <div id="ai-club">
+            <div id="program">
+                <div class="program__inner">
+                    <div class="program__title">
+                        <em class="TextTyping">Program</em>
+                        <h2>プログラム</h2>
+                    </div>
+                    <ul class="program__list">
+                        <li class="program__item">
+                            <div class="text">
+                                <h3><span>01</span>オンデマンド講座</h3>
+                                <p>AIの基礎から実践までのオンライン講座。<br>いつでもどこでも、自由にアクセス！<br>わからないところはチャットでコーチに質問できます。</p>
+                            </div>
+                        </li>
+                        <li class="program__item">
+                            <div class="text">
+                                <h3><span>02</span>コーチセッション</h3>
+                                <p>月に1～2回（放課後等）、コーチに直接質問できる！<br>解決への支援や進捗状況などを確認してもらえます。<br>HIROSHIMA AI PITCHの準備指導も。</p>
+                            </div>
+                        </li>
+                        <li class="program__item">
+                            <div class="text">
+                                <h3><span>03</span>HIROSHIMA AI PITCH</h3>
+                                <p>1年間の集大成として、<br>AIを活用した課題解決のアイデアを競い合うステージ。<br>コーチの指導のもとしっかり準備期間を設けています。</p>
+                            </div>
+                        </li>
+                        <li class="program__item">
+                            <div class="text">
+                                <h3><span>04</span>AIチャレンジなど</h3>
+                                <p>テクノロジーやデータを企業がどう活用しているかを体験。<br>AIの理解を深めるワークショップなどのイベントを計画中。<br>学校外の体験が他校との交流や新しい発見につながる！</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div><!-- #program -->
+            <div class="logo-swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="img/hiroshima-ai-club-slide.svg" width="2094" height="171" alt="Hiroshima AI Club" loading="lazy"></div>
+                    <div class="swiper-slide"><img src="img/hiroshima-ai-club-slide.svg" width="2094" height="171" alt="Hiroshima AI Club" loading="lazy"></div>
+                </div>
+            </div>
+            <div id="schedule">
+                <div class="schedule__inner">
+                    <div class="schedule__title">
+                        <em class="TextTyping">Schedule</em>
+                        <h2>スケジュール</h2>
+                    </div>
+                    <div class="schedule__content">
+                        <picture>
+                            <source media="(max-width: 480px)" type="image/jpg" srcset="img/schedule-sp.png?v=20250214" width="480" height="660">
+                            <img src="img/schedule.png?v=20250619" width="960" height="420" alt="ひろしまAI部の202年度のスケジュール" loading="lazy">
+                        </picture>
+                    </div>
+                </div>
+            </div><!-- #schedule -->
+            <div id="member">
+                <div class="member__inner">
+                    <div class="member__title">
+                        <em class="TextTyping">Member</em>
+                        <h2>部員紹介</h2>
+                    </div>
+                    <!-- <div class="member__wait">公開準備中</div> -->
+                    <div class="member__count">参加学校募集中！</div>
+                    <div class="member__slide member-swiper">
+                        <div class="swiper-wrapper">
+                            <div class="member__slide__item swiper-slide">
+                                <h3>広島大学附属高等学校</h3>
+                                <div class="img">
+                                    <img src="img/member/03.hirodai-fuzoku.JPG" width="600" height="450" alt="広島大学附属高等学校" loading="lazy">
+                                </div>
+                                <div class="text">今年度の広大附属高は、AIに興味のある６人が集まりました。まだAIでどんなことができるのかよく分からないことが多いですが、昨年度参加した先輩にアドバイスを頂きながら進めようと思います。６人の化学反応でどんな景色が見えるか楽しみです。</div>
+                            </div>
+                            <div class="member__slide__item swiper-slide">
+                                <h3>広島大学附属福山中学校・高等学校</h3>
+                                <div class="img">
+                                    <img src="img/member/04.hirodai-fukuyama.jpg" width="600" height="450" alt="広島大学附属福山中学校・高等学校" loading="lazy">
+                                </div>
+                                <div class="text">こんにちは。広島大学附属福山高等学校です。企業の方々からたくさんのことを学べる機会を楽しみにしています。昨年度に続いてAI PITCHに出場できるよう、AI技術について深く理解し、知識を吸収して成長していきたいと思います。どうぞよろしくお願いします！</div>
+                            </div>
+                            <div class="member__slide__item swiper-slide">
+                                <h3>広島県立五日市高等学校</h3>
+                                <div class="img">
+                                    <img src="img/member/05.itsukaichi.jpeg" width="600" height="450" alt="広島県立五日市高等学校" loading="lazy">
+                                </div>
+                                <div class="text">五日市高校です。私たちは、物事に真剣に取り組み、お互いを助け合える人たちが集まっています。このひろしまAI部の活動を通して、AIの仕組みやAIがどのようにして作られているのかを学び、これから情報系の進路に進むためにこの活動に応募しました。</div>
+                            </div>
+                            <div class="member__slide__item swiper-slide">
+                                <h3>広島県立賀茂高等学校</h3>
+                                <div class="img">
+                                    <img src="img/member/06.kamo.jpeg" width="600" height="450" alt="広島県立賀茂高等学校" loading="lazy">
+                                </div>
+                                <div class="text">賀茂高校は１・２年生の合同チームで９名の生徒が参加します。ＡＩやプログラミングはほとんどが初心者ですが、「総合的な探究の時間（ＧＡＰ）」で身に付けた探究力を生かして、「ＡＩを使った社会課題解決」を目指します！</div>
+                            </div>
+                            <div class="member__slide__item swiper-slide">
+                                <h3>広島県立賀茂北高等学校</h3>
+                                <div class="img">
+                                    <img src="img/member/07.kamo-kita.jpg" width="600" height="450" alt="広島県立賀茂北高等学校" loading="lazy">
+                                </div>
+                                <div class="text">今年度は、ひろしまAI部の活動に２年生5名で参加します。昨年度よりも人数が増えてにぎやかになりました。アイデアをたくさん出し合いながら、仲間とともにAIの可能性を広げていきたいと考えています。また、他校との交流も楽しみにしています。</div>
+                            </div>
+                            <div class="member__slide__item swiper-slide">
+                                <h3>広島県立祇園北高等学校</h3>
+                                <div class="img">
+                                    <img src="img/member/08.gion-kita.jpg" width="600" height="450" alt="広島県立祇園北高等学校" loading="lazy">
+                                </div>
+                                <div class="text">昨年度からAIやデジタル機器に関する学習を体験したりしてきました。この「ひろしまAI部」で私たちの知識を活用し、これからの時代に貢献できるよう頑張っていきたいと思います！！</div>
+                            </div>
+                            <div class="member__slide__item swiper-slide">
+                                <h3>広島県立呉商業高等学校</h3>
+                                <div class="img">
+                                    <img src="img/member/09.kure-syogyo.JPG" width="600" height="450" alt="広島県立呉商業高等学校" loading="lazy">
+                                </div>
+                                <div class="text">広島県立呉商業高等学校の３年・２年生です。 私たちは、情報分野に強い関心を持ち、AIを武器に様々なことに挑戦できる土台を作りたいと思っています。 「気になる」を「力」に変え、主体的に学ぶ力を身に着けたいです。 呉商業を盛り上げることができるよう、頑張ります！</div>
+                            </div>
+                            <div class="member__slide__item swiper-slide">
+                                <h3>広島県立呉三津田高等学校</h3>
+                                <div class="img">
+                                    <img src="img/member/10.mitsuda.jpg" width="600" height="450" alt="広島県立呉三津田高等学校" loading="lazy">
+                                </div>
+                                <div class="text">近年、世界ではAI化が加速しており、身の回りのさまざまなことがAIによって行われることが増えてきています。私たちは、今回のAI部での活動を通じて、AIについての知識や経験を身に付けることを目標として、活動を頑張っていきたいです。</div>
+                            </div>
+                            <div class="member__slide__item swiper-slide">
+                                <h3>広島県立上下高等学校</h3>
+                                <div class="img">
+                                    <img src="img/member/11.jyouge.jpg" width="600" height="450" alt="広島県立上下高等学校" loading="lazy">
+                                </div>
+                                <div class="text">これからの時代ＡＩの技術や知識は必ず生きてくる！ ＡＩを使って様々な社会問題を解決する手段を考えたい。 全学年から参加者がいるため、他学年と協力しながら、色々な視点で意見を出し合い最優秀賞目指して頑張ります！</div>
+                            </div>
+                            <div class="member__slide__item swiper-slide">
+                                <h3>広島県立庄原格致高等学校</h3>
+                                <div class="img">
+                                    <img src="img/member/12.syobara-kakuichi.jpg" width="600" height="450" alt="広島県立庄原格致高等学校" loading="lazy">
+                                </div>
+                                <div class="text">AIやプログラミング、データサイエンスを活用して、身近な「あったらいいな」をカタチにできるようになりたいと思っています。AIを通して他校の皆さんや企業の方との交流を楽しみながら頑張りますのでよろしくお願いします。</div>
+                            </div>
+                            <div class="member__slide__item swiper-slide">
+                                <h3>広島県立総合技術高等学校</h3>
+                                <div class="img">
+                                    <img src="img/member/13.sogo-gijyutu.jpg.jpg" width="600" height="450" alt="広島県立総合技術高等学校" loading="lazy">
+                                </div>
+                                <div class="text">AIがどのように身のまわりで使われているか、その技術に興味を持ちました。私たちは、総合技術高校情報技術科に在籍しています。本学科の学びを土台にAIという分野に積極的にかかわり、ひろしまAI部プロジェクトの活動を通して知識と経験を積み上げ、AIに関する様々なチャレンジをしていきます。</div>
+                            </div>
+                            <div class="member__slide__item swiper-slide">
+                                <h3>広島県立大門高等学校</h3>
+                                <div class="img">
+                                    <img src="img/member/14.daimon.JPG" width="600" height="450" alt="広島県立大門高等学校" loading="lazy">
+                                </div>
+                                <div class="text">今年度のAI部では、基礎的なプログラミングから応用的なAIモデルの活用まで幅広く学び、実践的なプロジェクトに挑戦します。部員同士でアイデアを出し合い、協力しながら成長できる場にしていきたいです。これらの活動を通じて、AI技術の理解を深めたいと思います。</div>
+                            </div>
+                            <div class="member__slide__item swiper-slide">
+                                <h3>広島県立広島井口高等学校</h3>
+                                <div class="img">
+                                    <img src="img/member/17.inokuchi.jpg" width="600" height="450" alt="広島県立広島井口高等学校" loading="lazy">
+                                </div>
+                                <div class="text">今回のAI部のへの参加は、学校としては2回目の参加となります。昨年の反省を踏まえながらAIやプログラミングの学習をして今年こそ賞を取れるよう励みたいと思います。また、AIチャレンジなどのイベントにも参加し成長したいと思っています。</div>
+                            </div>
+                            <div class="member__slide__item swiper-slide">
+                                <h3>広島県立広島国泰寺高等学校</h3>
+                                <div class="img">
+                                    <img src="img/member/19.kokutaiji.jpg" width="600" height="450" alt="広島県立広島国泰寺高等学校" loading="lazy">
+                                </div>
+                                <div class="text">今年もAI等のデジタル技術を少し勉強してみたい人から部活動の研究に活かしたい人まで幅広いメンバーが集まりました。今回のプログラムで学んだことを、その後のコンテストや発表等につなげていきたいです。広島国泰寺高校の代表として頑張ります！</div>
+                            </div>
+                            <div class="member__slide__item swiper-slide">
+                                <h3>広島県立広島皆実高等学校</h3>
+                                <div class="img">
+                                    <img src="img/member/20.minami.jpg" width="600" height="450" alt="広島県立広島皆実高等学校" loading="lazy">
+                                </div>
+                                <div class="text">研究したいテーマはそれぞれ異なりますが、最先端技術やDXへの強い関心と熱い気持ちは皆が強く持っています。文系理系、クラス間の壁を越えてTeam皆実で一致団結し、互いに高めあいながら探究活動に臨んでいきたいと思います。</div>
+                            </div>
+                            <div class="member__slide__item swiper-slide">
+                                <h3>広島県立府中高等学校</h3>
+                                <div class="img">
+                                    <img src="img/member/21.fuchu.jpg" width="600" height="450" alt="広島県立府中高等学校" loading="lazy">
+                                </div>
+                                <div class="text">理系から文系、ゲーム好きからアイデアマンなど、好奇心旺盛でユニークなメンバーが集まりました！私たちの身の周りにあるAIについて、知識を深め、それぞれの個性をいかしながら、身近な問題の解決に向けて取り組んでいきたいと思います！活動を通して、たくさんの経験ができることを楽しみにしています！</div>
+                            </div>
+                            <div class="member__slide__item swiper-slide">
+                                <h3>広島県立三原高等学校</h3>
+                                <div class="img">
+                                    <img src="img/member/22.mihara.jpg" width="600" height="450" alt="広島県立三原高等学校" loading="lazy">
+                                </div>
+                                <div class="text">三原高校 2年生です。校訓「敬心愛知 堅志力行」と「ＡＩ（人文字で表現）」を融合し、新たな可能性に挑戦します。ひろしまＡＩ部で基礎から実践まで学び、将来ＡＩを駆使することができる優秀な人材を目指して頑張ります。</div>
+                            </div>
+                            <div class="member__slide__item swiper-slide">
+                                <h3>広島市立広島工業高等学校</h3>
+                                <div class="img">
+                                    <img src="img/member/23.hiroshimakogyo.jpg" width="600" height="450" alt="広島市立広島工業高等学校" loading="lazy">
+                                </div>
+                                <div class="text">私たちは自動車科の3年生です。AI技術を活用して自動車開発に貢献したいと考えています。ひろしまAI部で学び、技術を深め、卒業後に活かせるスキルを磨きたいと思います。</div>
+                            </div>
+                            <div class="member__slide__item swiper-slide">
+                                <h3>広島市立基町高等学校</h3>
+                                <div class="img">
+                                    <img src="img/member/26.motomachi.jpg" width="600" height="450" alt="広島市立基町高等学校" loading="lazy">
+                                </div>
+                                <div class="text">AIの最先端技術を学び、社会や地域が抱える課題の解決に挑戦したいと考えています。基町高校で培った探究心と論理的思考力を活かし、仲間と切磋琢磨しながら、自分の可能性を広げ、広島の未来に貢献できる力を身に着けていきたいです！</div>
+                            </div>
+                            <div class="member__slide__item swiper-slide">
+                                <h3>広島県尾道南高等学校</h3>
+                                <div class="img">
+                                    <img src="img/member/27.onomichi-minami.jpg" width="600" height="450" alt="広島県尾道南高等学校" loading="lazy">
+                                </div>
+                                <div class="text">交流を深めながら、AIに関する知識も深めたいと思っています。 学校、尾道市など身近な困りごとの助けになれるようなことができたらいいなと思っています。AIが身近な存在になるように、尾道南高校を代表して一歩前へ！楽しみます。</div>
+                            </div>
+                            <div class="member__slide__item swiper-slide">
+                                <h3>盈進中学高等学校</h3>
+                                <div class="img">
+                                    <img src="img/member/28.eishin.jpg" width="600" height="450" alt="盈進中学高等学校" loading="lazy">
+                                </div>
+                                <div class="text">現在、AIは凄まじい勢いで発達をしています。その波に乗り遅れないためにも、今こそ学ぶ必要があると、私たちは考えます。部員全員の力を一つにしながら研究を重ね、一日も早くAIをフル活用できるようになりたいと、情熱の炎を燃やしています。</div>
+                            </div>
+                            <div class="member__slide__item swiper-slide">
+                                <h3>N校グループ広島キャンパス</h3>
+                                <div class="img">
+                                    <img src="img/member/30.n-hiroshima.jpg" width="600" height="450" alt="N校グループ広島キャンパス" loading="lazy">
+                                </div>
+                                <div class="text">私たちは、この活動を通して普段よく使うAIに対する理解を深めていきたいと思います。AIによって孤独を癒やし、本物の人間と話しているような体験ができる対話AIを作ってみたいと考えております。AIを今後の生活に活かす工夫を身に付けます。</div>
+                            </div>
+                            <div class="member__slide__item swiper-slide">
+                                <h3>クラーク記念国際高等学校 広島キャンパス</h3>
+                                <div class="img">
+                                    <img src="img/member/31.kurak.jpg" width="600" height="450" alt="クラーク記念国際高等学校 広島キャンパス" loading="lazy">
+                                </div>
+                                <div class="text">クラーク記念国際高等学校広島キャンパスです。学年もコースも違う個性豊かなメンバーで、先生含め仲良く活動しています！ AI の技術や知識を学び、探究し、私たちの未来をデザインしていける人材を目指します。 「夢」に向かって、「挑戦」し続け、目標を「達成」するために頑張ります！よろしくお願い致します！</div>
+                            </div>
+                            <div class="member__slide__item swiper-slide">
+                                <h3>進徳女子高等学校</h3>
+                                <div class="img">
+                                    <img src="img/member/33.hiroshima-shintoku.png" width="600" height="450" alt="進徳女子高等学校" loading="lazy">
+                                </div>
+                                <div class="text">AIにはまだあまり触れたことがありませんが、これからの社会で必要な力だと感じています。まずは知り、触れ、学ぶという挑戦から始めてみようと思い、参加します。不安もありますが、自分の成長のために精一杯努力したいです</div>
+                            </div>
+                            <div class="member__slide__item swiper-slide">
+                                <h3>崇徳高等学校</h3>
+                                <div class="img">
+                                    <img src="img/member/34.hiroshima-sotoku.jpeg" width="600" height="450" alt="崇徳高等学校" loading="lazy">
+                                </div>
+                                <div class="text">部員のひとりが「ひろしまAI部」をみつけ、まわりに声掛けをして部員が合計6名になりました。親がシステム開発をしているとか、探究活動にAIが使えそうとか、ニュースや小説を読んでAIに興味を持ったなどいろいろな部員がいますが、みんなで頑張っていきます！</div>
+                            </div>
+                            <div class="member__slide__item swiper-slide">
+                                <h3>広島学院中学校・高等学校</h3>
+                                <div class="img">
+                                    <img src="img/member/35.hiroshima-gakuin.jpg" width="600" height="450" alt="広島学院中学校・高等学校" loading="lazy">
+                                </div>
+                                <div class="text">“Men for others, with others”の精神を大切にしながら、AIの知識や技術を仲間とともに学び、協力して社会の課題に向き合っていきます。そして多くの人の役に立つアイデアや価値を生み出せるよう、探究心と行動力をもって挑戦します。</div>
+                            </div>
+                            <div class="member__slide__item swiper-slide">
+                                <h3>広島工業大学高等学校</h3>
+                                <div class="img">
+                                    <img src="img/member/36.hiroshima-kougyo.jpg" width="600" height="450" alt="広島工業大学高等学校" loading="lazy">
+                                </div>
+                                <div class="text">ものづくりが好きな高校生が集まったチームです！ひろしまAI部でAIの知識を深め、昨今の情報化社会で必要な技術を身につけて行きたいと思います！仲間と一緒に学び、和気あいあいとしながら、楽しくAIを作れたらなと思っています！！</div>
+                            </div>
+                            <div class="member__slide__item swiper-slide">
+                                <h3>広島県瀬戸内高等学校</h3>
+                                <div class="img">
+                                    <img src="img/member/37.setouchi.jpg" width="600" height="450" alt="広島県瀬戸内高等学校" loading="lazy">
+                                </div>
+                                <div class="text">私たち広島県瀬戸内高等学校は，現在Pythonやゲームのプログラミングについて学習しています。ひろしまai部の活動を通して，生成AIなどの知識を習得し，プログラミングに生かしていきたいと考えています。また，他校の生徒と交流し，様々な考えや価値観に触れる中で，成長していきたいと思います。</div>
+                            </div>
+                            <div class="member__slide__item swiper-slide">
+                                <h3>広島修道大学ひろしま協創高等学校</h3>
+                                <div class="img">
+                                    <img src="img/member/38.hiroshima-kyosou.JPG" width="600" height="450" alt="広島修道大学ひろしま協創高等学校" loading="lazy">
+                                </div>
+                                <div class="text">AIに興味を持っているメンバーが集まって参加しました。今年からの参加です。興味はありますが、詳しい人がいるわけではありません。少人数での参加ですが、協力して楽しく学んでいきたいです。よろしくお願いします。</div>
+                            </div>
+                            <div class="member__slide__item swiper-slide">
+                                <h3>安田女子中学高等学校</h3>
+                                <div class="img">
+                                    <img src="img/member/40.yasuda-jyoshi.jpg" width="600" height="450" alt="安田女子中学高等学校" loading="lazy">
+                                </div>
+                                <div class="text">安田女子高校です！「この世界に、何か素敵を生み出したい！AIで！」という思いで、メンバーが集まりました。興味や得意分野を活かしながらAIを学び、考え、形にする本気の挑戦を、夢中で楽しみたいと思います。失敗を恐れず、自由な発想で課題に取り組みます！</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-button-prev member-swiper-button-prev"></div>
+                    <div class="swiper-button-next member-swiper-button-next"></div>
+                    <div class="swiper-scrollbar member-swiper-scrollbar"></div>
+                </div>
+            </div><!-- #member -->
+            <div id="coach">
+                <div class="coach__inner">
+                    <div class="coach__title">
+                        <em class="TextTyping">Coach</em>
+                        <h2>コーチ等の紹介</h2>
+                    </div>
+                    <div class="coach__slide coach-swiper">
+                        <div class="swiper-wrapper">
+                            <div class="coach__slide__item swiper-slide pink">
+                                <div class="nickname">
+                                    <em>ぴょん吉先生<span>（左）</span></em>
+                                    <em>かえで先生<span>（右）</span></em>
+                                </div>
+                                <h3>株式会社荒谷建設コンサルタント</h3>
+                                <div class="img">
+                                    <img src="img/coach/1.aratani_left_pyon_right_kaede.jpg" width="600" height="450" alt="株式会社荒谷建設コンサルタント" loading="lazy">
+                                </div>
+                            </div>
+                            <div class="coach__slide__item swiper-slide blue">
+                                <div class="nickname">
+                                    <em>くわもん先生</em>
+                                </div>
+                                <h3>オタフクホールディングス株式会社</h3>
+                                <div class="img">
+                                    <img src="img/coach/2.otafuku_coach.jpg" width="600" height="450" alt="オタフクホールディングス株式会社" loading="lazy">
+                                </div>
+                            </div>
+                            <div class="coach__slide__item swiper-slide pink">
+                                <div class="nickname">
+                                    <em>Y先生</em>
+                                </div>
+                                <h3>株式会社システムフレンド</h3>
+                                <div class="img">
+                                    <img src="img/coach/3.system.friend_coach.jpg" width="600" height="450" alt="株式会社システムフレンド" loading="lazy">
+                                </div>
+                            </div>
+                            <div class="coach__slide__item swiper-slide blue">
+                                <div class="nickname">
+                                    <em>ゆっさ先生</em>
+                                    <em>しまこ先生</em>
+                                </div>
+                                <h3>ひろぎんITソリューションズ株式会社</h3>
+                                <div class="img">
+                                    <img src="img/coach/4.HITS_coach.jpg" width="600" height="450" alt="ひろぎんITソリューションズ株式会社" loading="lazy">
+                                </div>
+                            </div>
+                            <div class="coach__slide__item swiper-slide pink">
+                                <div class="nickname">
+                                    <em>さき先生</em>
+                                </div>
+                                <h3>株式会社ヒロテック</h3>
+                                <div class="img">
+                                    <img src="img/coach/5.hirotec_coach.jpg" width="600" height="450" alt="株式会社ヒロテック" loading="lazy">
+                                </div>
+                            </div>
+                            <div class="coach__slide__item swiper-slide blue">
+                                <div class="nickname">
+                                    <em>なおや先生</em>
+                                </div>
+                                <h3>復建調査設計株式会社</h3>
+                                <div class="img">
+                                    <img src="img/coach/6.fukken_coach.jpg" width="600" height="450" alt="復建調査設計株式会社" loading="lazy">
+                                </div>
+                            </div>
+                             <div class="coach__slide__item swiper-slide pink">
+                                <div class="nickname">
+                                    <em>たっちゃん先生</em>
+                                </div>
+                                <h3>平和情報システム株式会社</h3>
+                                <div class="img">
+                                    <img src="img/coach/7.heiwa.jyouhou_coach.jpg" width="600" height="450" alt="平和情報システム株式会社" loading="lazy">
+                                </div>
+                            </div>
+                            <div class="coach__slide__item swiper-slide blue">
+                                <div class="nickname">
+                                    <em>うま先生<span>（左）</span></em>
+                                    <em>たがしら先生<span>（右）</span></em>
+                                </div>
+                                <h3>マイクロンメモリジャパン株式会社</h3>
+                                <div class="img">
+                                    <img src="img/coach/8.Micron_left_uma_right_tagashira.JPG" width="600" height="450" alt="マイクロンメモリジャパン株式会社" loading="lazy">
+                                </div>
+                            </div>
+                            <div class="coach__slide__item swiper-slide blue">
+                                <div class="nickname">
+                                    <em>中本尊元さん<span>(アドバイザー)</span></em>
+                                    
+                                </div>
+                                <h3>マツダ株式会社</h3>
+                                <div class="img">
+                                    <img src="img/coach/9.mazda_adviser.jpg" width="600" height="450" alt="マツダ株式会社" loading="lazy">
+                                </div>
+                            </div>
+                            <div class="coach__slide__item swiper-slide pink">
+                                <div class="nickname">
+                                    <em>かんかん先生<span>（左）</span></em>
+                                    <em>みなみ先生<span>（右）</span></em>
+                                </div>
+                                <h3>株式会社Rejoui</h3>
+                                <div class="img">
+                                    <img src="img/coach/10.rejoui_coach.png" width="600" height="450" alt="株式会社Rejoui" loading="lazy">
+                                </div>
+                            </div>
+                            <!--<div class="coach__slide__item swiper-slide pink">
+                                <div class="nickname">
+                                    <em>青ちゃん先生<span>（左）</span></em>
+                                    <em>うめちゃん先生<span>（右）</span></em>
+                                </div>
+                                <h3>株式会社アドテックプラズマテクノロジー</h3>
+                                <div class="img">
+                                    <img src="img/coach/10.rejoui_coach.png" width="600" height="450" alt="株式会社アドテックプラズマテクノロジー" loading="lazy">
+                                </div>
+                            </div>-->
+                            <div class="coach__slide__item swiper-slide blue">
+                                <div class="nickname">
+                                    <em>おがわ先生</em>
+                                </div>
+                                <h3>西川ゴム工業株式会社</h3>
+                                <div class="img">
+                                    <img src="img/coach/12.nishikawa_gomu_coach.jpg" width="600" height="450" alt="西川ゴム工業株式会社" loading="lazy">
+                                </div>
+                            </div>
+                            <!--<div class="coach__slide__item swiper-slide blue">
+                                <div class="nickname">
+                                    <em>せいきん先生<span>（左）</span></em>
+                                    <em>かずき先生<span>（右）</span></em>
+                                </div>
+                                <h3>ホーコス株式会社</h3>
+                                <div class="img">
+                                    <img src="img/coach/horkos_coach.jpg" width="600" height="450" alt="ホーコス株式会社" loading="lazy">
+                                </div>
+                            </div>-->
+                            <div class="coach__slide__item swiper-slide pink">
+                                <div class="nickname">
+                                    <em>村中先生<span>(左)</span></em>
+                                    <em>ふね先生<span>（中央）</span></em>
+                                    <em>あみもと先生<span>(右)</span></em>
+                                </div>
+                                <h3>株式会社ドコモCS中国<br>（NTTドコモグループ）</h3>
+                                <div class="img">
+                                    <img src="img/coach/14.docomo_cs_coach.jpg" width="600" height="450" alt="株式会社ドコモCS中国（NTTドコモグループ）" loading="lazy">
+                                </div>
+                            </div>
+                            <!--<div class="coach__slide__item swiper-slide blue">
+                                <div class="nickname">
+                                    <em>ホロ先生</em>
+                                </div>
+                                <h3>合同会社寺子屋ホロ</h3>
+                                <div class="img">
+                                    <img src="img/coach/terakoya-horo_coach.jpg" width="600" height="450" alt="合同会社寺子屋ホロ" loading="lazy">
+                                </div>
+                            </div>-->
+                            <div class="coach__slide__item swiper-slide blue">
+                                <div class="nickname">
+                                    <em>なべたろう先生</em>
+                                </div>
+                                <h3>株式会社テレビ新広島</h3>
+                                <div class="img">
+                                    <img src="img/coach/16.tss_coach.jpg" width="600" height="450" alt="株式会社テレビ新広島" loading="lazy">
+                                </div>
+                            </div>
+                            <div class="coach__slide__item swiper-slide pink">
+                                <div class="nickname">
+                                    <em>満井先生</em>
+                                </div>
+                                <h3>戸田工業株式会社</h3>
+                                <div class="img">
+                                    <img src="img/coach/17.toda-kogyo_coach.jpg" width="600" height="450" alt="戸田工業株式会社" loading="lazy">
+                                </div>
+                            </div>
+                            <!--<div class="coach__slide__item swiper-slide pink">
+                                <div class="nickname">
+                                    <em>さだきち先生<span>（左）</span></em>
+                                    <em>みなみ先生<span>（右）</span></em>
+                                </div>
+                                <h3>株式会社熊平製作所</h3>
+                                <div class="img">
+                                    <img src="img/coach/18.kumahira_coach.JPG" width="600" height="450" alt="株式会社熊平製作所" loading="lazy">
+                                </div>
+                            </div>-->
+                            <div class="coach__slide__item swiper-slide blue">
+                                <div class="nickname">
+                                    <em>Yuusuke先生</em>
+                                    <em>しょうま先生</em>
+                                    <em>ふみすけ先生</em> 
+                                    <em>ちなつ先生</em>
+                                    <em>座禅いぬ先生</em>
+                                   <!---- <p>※写真の左２名はコーチでない社員</p>-->
+                                </div>
+                                <h3>CDLEひろしま</h3>
+                                <div class="img">
+                                    <img src="img/coach/19.CDLE-hiroshima_coach.jpg" width="600" height="450" alt="CDLEひろしま" loading="lazy">
+                                </div>
+                            </div>
+                            <!--<div class="coach__slide__item swiper-slide blue">
+                                <div class="nickname">
+                                    <em>しゅん先生</em>
+                                </div>
+                                <h3>広島県</h3>
+                                <div class="img">
+                                    <img src="img/coach/20.hiroshimaken_coach.jpg" width="600" height="450" alt="広島県" loading="lazy">
+                                </div>
+                            </div>-->
+                    </div>
+                    <div class="swiper-button-prev coach-swiper-button-prev"></div>
+                    <div class="swiper-button-next coach-swiper-button-next"></div>
+                    <div class="swiper-scrollbar coach-swiper-scrollbar"></div>
+                </div>
+            </div><!-- #coach -->
+            <div id="flow">
+                <div class="flow__inner">
+                    <div class="flow__title">
+                        <em class="TextTyping">Flow</em>
+                        <h2>入部手続き</h2>
+                    </div>
+                    <div class="flow__content">
+                        <ul>
+                            <li class="student">
+                                <span>STEP<em>1</em></span>
+                                <p class="character">高校生</p>
+                                <p class="text">先生に相談</p>
+                            </li>
+                            <li class="teacher">
+                                <span>STEP<em>2</em></span>
+                                <p class="character">先生</p>
+                                <p class="text"><a href="#footer">運営事務局</a>に連絡</p>
+                            </li>
+                            <li class="teacher">
+                                <span>STEP<em>3</em></span>
+                                <p class="character">先生</p>
+                                <p class="text">運営事務局から届く<br>参加用書類を受け取る</p>
+                            </li>
+                            <li class="teacher">
+                                <span>STEP<em>4</em></span>
+                                <p class="character">先生</p>
+                                <p class="text">入部届を取りまとめて提出</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div><!-- #flow -->
+        </div><!-- #ai-club -->
+        <div id="consortium">
+            <div class="consortium__inner">
+                <div id="system">
+                    <div class="system__inner">
+                        <div class="system__title">
+                            <h2>ひろしまAI部とは</h2>
+                        </div>
+                        <div class="system__text">
+                            <p>産学官が連携し、高校生を対象に、AIを理解し、活用する力を身に着ける人材育成プログラム</p>
+                        </div>
+                        <div class="system__img">
+                            <picture>
+                                <source media="(max-width: 480px)" srcset="img/system-sp.png?v=20250214" width="480" height="740">
+                                <source media="(max-width: 768px)" srcset="img/system-tab.png?v=20250214" width="768" height="450">
+                                <img src="img/system-pc.png?v=20250214" width="960" height="420" alt="ひろしまAI部とは" loading="lazy">
+                            </picture>
+                        </div>
+                    </div>
+                </div><!-- #system -->
+                <div class="system__btn"><a href="#footer">企業・団体のコンソーシアム<br>参画申込はこちら</a></div>
+                <div id="participant">
+                    <div class="participant__inner">
+                        <div class="participant__title">
+                            <h2>参加企業・団体</h2>
+                        </div>
+                        <div class="participant__content">
+                            <h3>正会員</h3>
+                            <ul class="participant__list">
+                                <li class="participant__item">
+                                    <a href="https://www.asukanet.co.jp/" target="_blank" rel="noopener">
+                                        <div class="img">
+                                            <div class="img__inner">
+                                                <img src="img/participant/asukanet_logo.jpg" width="480" height="201" alt="株式会社アスカネット" loading="lazy">
+                                            </div>
+                                        </div>
+                                        <p>株式会社アスカネット</p>
+                                    </a>
+                                </li>
+                                <li class="participant__item">
+                                    <a href="https://www.adtec-rf.co.jp/" target="_blank" rel="noopener">
+                                        <div class="img">
+                                            <div class="img__inner">
+                                                <img src="img/participant/adtec_logo.jpg" width="480" height="113" alt="株式会社アドテックプラズマテクノロジー" loading="lazy">
+                                            </div>
+                                        </div>
+                                        <p>株式会社アドテックプラズマテクノロジー</p>
+                                    </a>
+                                </li>
+                                <li class="participant__item">
+                                    <a href="https://www.aratani.co.jp/" target="_blank" rel="noopener">
+                                        <div class="img">
+                                            <div class="img__inner">
+                                                <img src="img/participant/aratani-kensetsu-consultants_logo.jpg" width="480" height="110" alt="株式会社荒谷建設コンサルタント" loading="lazy">
+                                            </div>
+                                        </div>
+                                        <p>株式会社荒谷建設コンサルタント</p>
+                                    </a>
+                                </li>
+                                <li class="participant__item">
+                                    <a href="https://wantedlyinc.com/ja" target="_blank" rel="noopener">
+                                        <div class="img">
+                                            <div class="img__inner">
+                                                <img src="img/participant/wantedly_logo.jpg" width="480" height="82" alt="ウォンテッドリー株式会社" loading="lazy">
+                                            </div>
+                                        </div>
+                                        <p>ウォンテッドリー株式会社</p>
+                                    </a>
+                                </li>
+                                <li class="participant__item">
+                                    <a href="https://aicross.co.jp/" target="_blank" rel="noopener">
+                                        <div class="img">
+                                            <div class="img__inner">
+                                                <img src="img/participant/ai-cross_logo.jpg" width="480" height="110" alt="AI CROSS株式会社" loading="lazy">
+                                            </div>
+                                        </div>
+                                        <p>AI CROSS株式会社</p>
+                                    </a>
+                                </li>
+                                <li class="participant__item">
+                                    <a href="https://8kt.jp/" target="_blank" rel="noopener">
+                                        <div class="img">
+                                            <div class="img__inner">
+                                                <img src="img/participant/eight-knot_logo.jpg" width="298" height="42" alt="株式会社エイトノット" loading="lazy">
+                                            </div>
+                                        </div>
+                                        <p>株式会社エイトノット</p>
+                                    </a>
+                                </li>
+                                <li class="participant__item">
+                                    <a href="https://eclect.co.jp/" target="_blank" rel="noopener">
+                                        <div class="img">
+                                            <div class="img__inner">
+                                                <img src="img/participant/eclect_logo.jpg" width="261" height="59" alt="株式会社エクレクト" loading="lazy">
+                                            </div>
+                                        </div>
+                                        <p>株式会社エクレクト</p>
+                                    </a>
+                                </li>
+                                <li class="participant__item">
+                                    <a href="https://www.docomo.ne.jp/corporate/" target="_blank" rel="noopener">
+                                        <div class="img">
+                                            <div class="img__inner">
+                                                <img src="img/participant/docomo_logo.jpg" width="480" height="97" alt="株式会社NTTドコモ" loading="lazy">
+                                            </div>
+                                        </div>
+                                        <p>株式会社NTTドコモ</p>
+                                    </a>
+                                </li>
+                                <li class="participant__item">
+                                    <a href="https://nft-dct.com/" target="_blank" rel="noopener">
+                                        <div class="img">
+                                            <div class="img__inner">
+                                                <img src="img/participant/n-frontier_logo.jpg" width="147" height="160" alt="株式会社Nフロンティア" loading="lazy">
+                                            </div>
+                                        </div>
+                                        <p>株式会社Nフロンティア</p>
+                                    </a>
+                                </li>
+                                <li class="participant__item">
+                                    <a href="https://www.otafuku.co.jp" target="_blank" rel="noopener">
+                                        <div class="img">
+                                            <div class="img__inner">
+                                                <img src="img/participant/otafuku_logo.jpg" width="480" height="100" alt="オタフクホールディングス株式会社" loading="lazy">
+                                            </div>
+                                        </div>
+                                        <p>オタフクホールディングス株式会社</p>
+                                    </a>
+                                </li>
+                                <li class="participant__item">
+                                    <a href="https://www.kiw.co.jp/" target="_blank" rel="noopener">
+                                        <div class="img">
+                                            <div class="img__inner">
+                                                <img src="img/participant/kitagawa-tekkousho_logo.jpg" width="480" height="101" alt="株式会社北川鉄工所" loading="lazy">
+                                            </div>
+                                        </div>
+                                        <p>株式会社北川鉄工所</p>
+                                    </a>
+                                </li>
+                                 <li class="participant__item">
+                                    <a href="https://www.kumahira.co.jp/" target="_blank" rel="noopener">
+                                        <div class="img">
+                                            <div class="img__inner">
+                                                <img src="img/participant/kumahira.png" width="361" height="94" alt="株式会社熊平製作所" loading="lazy">
+                                            </div>
+                                        </div>
+                                        <p>株式会社熊平製作所</p>
+                                    </a>
+                                </li>
+                                <li class="participant__item">
+                                    <a href="https://kg-m.jp" target="_blank" rel="noopener">
+                                        <div class="img">
+                                            <div class="img__inner">
+                                                <img src="img/participant/kg-motor_logo.jpg" width="434" height="161" alt="KGモーターズ株式会社" loading="lazy">
+                                            </div>
+                                        </div>
+                                        <p>KGモーターズ株式会社</p>
+                                    </a>
+                                </li>
+                                <li class="participant__item">
+                                    <a href="https://www.sanfrecce.co.jp/" target="_blank" rel="noopener">
+                                        <div class="img">
+                                            <div class="img__inner">
+                                                <img src="img/participant/sanfrecce.png" width="147" height="160" alt="株式会社サンフレッチェ広島" loading="lazy">
+                                            </div>
+                                        </div>
+                                        <p>株式会社サンフレッチェ広島</p>
+                                    </a>
+                                </li>
+                                <li class="participant__item">
+                                    <a href="https://www.jdla.org/" target="_blank" rel="noopener">
+                                        <div class="img">
+                                            <div class="img__inner">
+                                                <img src="img/participant/CDLE-hiroshima.png" width="361" height="94" alt="CDLEひろしま" loading="lazy">
+                                            </div>
+                                        </div>
+                                        <p>CDLEひろしま</p>
+                                    </a>
+                                </li>
+                                <li class="participant__item">
+                                    <a href="https://gene-leaf.co.jp/" target="_blank" rel="noopener">
+                                        <div class="img">
+                                            <div class="img__inner">
+                                                <img src="img/participant/gene-leaf_logo.jpg" width="480" height="162" alt="合同会社GeneLeaf" loading="lazy">
+                                            </div>
+                                        </div>
+                                        <p>合同会社GeneLeaf</p>
+                                    </a>
+                                </li>
+                                <li class="participant__item">
+                                    <a href="https://www.systemfriend.co.jp/" target="_blank" rel="noopener">
+                                        <div class="img">
+                                            <div class="img__inner">
+                                                <img src="img/participant/system-friend_logo.jpg" width="200" height="60" alt="株式会社システムフレンド" loading="lazy">
+                                            </div>
+                                        </div>
+                                        <p>株式会社システムフレンド</p>
+                                    </a>
+                                </li>
+                                <li class="participant__item">
+                                    <a href="https://chugoku-np.com/" target="_blank" rel="noopener">
+                                        <div class="img">
+                                            <div class="img__inner">
+                                                <img src="img/participant/chugoku-shinbun_logo.jpg" width="480" height="77" alt="株式会社中国新聞社" loading="lazy">
+                                            </div>
+                                        </div>
+                                        <p>株式会社中国新聞社</p>
+                                    </a>
+                                </li>
+                                <li class="participant__item">
+                                    <a href="https://terakoyahoro.com/" target="_blank" rel="noopener">
+                                        <div class="img">
+                                            <div class="img__inner">
+                                                <img src="img/participant/terakoya-horo_logo.jpg?v=20241220" width="161" height="161" alt="合同会社寺子屋ホロ" loading="lazy">
+                                            </div>
+                                        </div>
+                                        <p>合同会社寺子屋ホロ</p>
+                                    </a>
+                                </li>
+                                <li class="participant__item">
+                                    <a href="https://www.cecnet.co.jp/ " target="_blank" rel="noopener">
+                                        <div class="img">
+                                            <div class="img__inner">
+                                                <img src="img/participant/tyudengijyutsu.png" width="147" height="160" alt="中電技術コンサルタント株式会社" loading="lazy">
+                                            </div>
+                                        </div>
+                                        <p>中電技術コンサルタント株式会社</p>
+                                    </a>
+                                </li>
+                                <li class="participant__item">
+                                    <a href="https://www.tss-tv.co.jp/" target="_blank" rel="noopener">
+                                        <div class="img">
+                                            <div class="img__inner">
+                                                <img src="img/participant/tv-shinhiroshima_logo.jpg" width="442" height="48" alt="株式会社テレビ新広島" loading="lazy">
+                                            </div>
+                                        </div>
+                                        <p>株式会社テレビ新広島</p>
+                                    </a>
+                                </li>
+                                <li class="participant__item">
+                                    <a href="https://tenho7.jp/" target="_blank" rel="noopener">
+                                        <div class="img">
+                                            <div class="img__inner">
+                                                <img src="img/participant/tenho_logo.jpg" width="480" height="105" alt="株式会社TENHO" loading="lazy">
+                                            </div>
+                                        </div>
+                                        <p>株式会社TENHO</p>
+                                    </a>
+                                </li>
+                                <li class="participant__item">
+                                    <a href="https://www.todakogyo.co.jp/" target="_blank" rel="noopener">
+                                        <div class="img">
+                                            <div class="img__inner">
+                                                <img src="img/participant/toda-kogyo.jpg" width="147" height="160" alt="戸田工業株式会社" loading="lazy">
+                                            </div>
+                                        </div>
+                                        <p>戸田工業株式会社</p>
+                                    </a>
+                                </li>
+                                <li class="participant__item">
+                                    <a href="https://www.dreamarts.co.jp/" target="_blank" rel="noopener">
+                                        <div class="img">
+                                            <div class="img__inner">
+                                                <img src="img/participant/dreamarts_logo.jpg" width="480" height="69" alt="株式会社ドリーム・アーツ" loading="lazy">
+                                            </div>
+                                        </div>
+                                        <p>株式会社ドリーム・アーツ</p>
+                                    </a>
+                                </li>
+                                <li class="participant__item">
+                                    <a href="https://www.nishikawa-rbr.co.jp/" target="_blank" rel="noopener">
+                                        <div class="img">
+                                            <div class="img__inner">
+                                                <img src="img/participant/nishikawa-gomu_logo.jpg" width="480" height="42" alt="西川ゴム工業株式会社" loading="lazy">
+                                            </div>
+                                        </div>
+                                        <p>西川ゴム工業株式会社</p>
+                                    </a>
+                                </li>
+                                <li class="participant__item">
+                                    <a href="https://hek.co.jp/" target="_blank" rel="noopener">
+                                        <div class="img">
+                                            <div class="img__inner">
+                                                <img src="img/participant/hielecom_logo.jpg" width="480" height="102" alt="株式会社ハイエレコン" loading="lazy">
+                                            </div>
+                                        </div>
+                                        <p>株式会社ハイエレコン</p>
+                                    </a>
+                                </li>
+                                <li class="participant__item">
+                                    <a href="https://bltinc.co.jp/" target="_blank" rel="noopener">
+                                        <div class="img">
+                                            <div class="img__inner">
+                                                <img src="img/participant/bullet-group_logo.jpg" width="438" height="127" alt="バレットグループ株式会社" loading="lazy">
+                                            </div>
+                                        </div>
+                                        <p>バレットグループ株式会社</p>
+                                    </a>
+                                </li>
+                                <li class="participant__item">
+                                    <a href="https://www.hakuhodo-technologies.co.jp/" target="_blank" rel="noopener">
+                                        <div class="img">
+                                            <div class="img__inner">
+                                                <img src="img/participant/H_Technologies_2_logo.jpg" width="147" height="160" alt="株式会社博報堂テクノロジーズ" loading="lazy">
+                                            </div>
+                                        </div>
+                                        <p>株式会社博報堂テクノロジーズ</p>
+                                    </a>
+                                </li>
+                                <li class="participant__item">
+                                    <a href="https://berise.co.jp/" target="_blank" rel="noopener">
+                                        <div class="img">
+                                            <div class="img__inner">
+                                                <img src="img/participant/berise_logo.jpg" width="480" height="81" alt="株式会社ビーライズ" loading="lazy">
+                                            </div>
+                                        </div>
+                                        <p>株式会社ビーライズ</p>
+                                    </a>
+                                </li>
+                                <li class="participant__item">
+                                    <a href="https://www.hirogin-its.co.jp/" target="_blank" rel="noopener">
+                                        <div class="img">
+                                            <div class="img__inner">
+                                                <img src="img/participant/hirogin-it-solutions_logo.jpg" width="480" height="58" alt="ひろぎんITソリューションズ株式会社" loading="lazy">
+                                            </div>
+                                        </div>
+                                        <p>ひろぎんITソリューションズ株式会社</p>
+                                    </a>
+                                </li>
+                                <li class="participant__item">
+                                    <a href="https://www.hirogin-hd.co.jp" target="_blank" rel="noopener">
+                                        <div class="img">
+                                            <div class="img__inner">
+                                                <img src="img/participant/hirogin-hd_logo.jpg" width="446" height="91" alt="株式会社ひろぎんホールディングス" loading="lazy">
+                                            </div>
+                                        </div>
+                                        <p>株式会社ひろぎんホールディングス</p>
+                                    </a>
+                                </li>
+                                <li class="participant__item">
+                                    <a href="https://www.hia.or.jp/" target="_blank" rel="noopener">
+                                        <div class="img">
+                                            <div class="img__inner">
+                                                <img src="img/participant/hia_logo.jpg" width="338" height="55" alt="一般社団法人広島県情報産業協会" loading="lazy">
+                                            </div>
+                                        </div>
+                                        <p>一般社団法人広島県情報産業協会</p>
+                                    </a>
+                                </li>
+                                <li class="participant__item">
+                                    <a href="https://hiroshimadragonflies.com/" target="_blank" rel="noopener">
+                                        <div class="img">
+                                            <div class="img__inner">
+                                                <img src="img/participant/dragonflies_logo.jpg" width="480" height="86" alt="株式会社広島ドラゴンフライズ" loading="lazy">
+                                            </div>
+                                        </div>
+                                        <p>株式会社広島ドラゴンフライズ</p>
+                                    </a>
+                                </li>
+                                <li class="participant__item">
+                                    <a href="https://www.hirotec.co.jp/" target="_blank" rel="noopener">
+                                        <div class="img">
+                                            <div class="img__inner">
+                                                <img src="img/participant/hirotec_logo.jpg" width="480" height="101" alt="株式会社ヒロテック" loading="lazy">
+                                            </div>
+                                        </div>
+                                        <p>株式会社ヒロテック</p>
+                                    </a>
+                                </li>
+                                <li class="participant__item">
+                                    <a href="https://www.fukken.co.jp" target="_blank" rel="noopener">
+                                        <div class="img">
+                                            <div class="img__inner">
+                                                <img src="img/participant/fukken-chousa-sekkei_logo.jpg" width="480" height="82" alt="復建調査設計株式会社" loading="lazy">
+                                            </div>
+                                        </div>
+                                        <p>復建調査設計株式会社</p>
+                                    </a>
+                                </li>
+                                <li class="participant__item">
+                                    <a href="https://www.heiwa-joho.co.jp" target="_blank" rel="noopener">
+                                        <div class="img">
+                                            <div class="img__inner">
+                                                <img src="img/participant/heiwa-jouhou-system_logo.jpg" width="480" height="50" alt="平和情報システム株式会社" loading="lazy">
+                                            </div>
+                                        </div>
+                                        <p>平和情報システム株式会社</p>
+                                    </a>
+                                </li>
+                                <li class="participant__item">
+                                    <a href="https://www.horkos.co.jp/" target="_blank" rel="noopener">
+                                        <div class="img">
+                                            <div class="img__inner">
+                                                <img src="img/participant/horkos_logo.jpg" width="480" height="117" alt="ホーコス株式会社" loading="lazy">
+                                            </div>
+                                        </div>
+                                        <p>ホーコス株式会社</p>
+                                    </a>
+                                </li>
+                                <li class="participant__item">
+                                    <a href="https://jp.micron.com/" target="_blank" rel="noopener">
+                                        <div class="img">
+                                            <div class="img__inner">
+                                                <img src="img/participant/micron_logo.jpg?v=20241220" width="480" height="131" alt="マイクロンメモリ ジャパン株式会社" loading="lazy">
+                                            </div>
+                                        </div>
+                                        <p>マイクロンメモリ ジャパン株式会社</p>
+                                    </a>
+                                </li>
+                                <li class="participant__item">
+                                    <a href="https://www.mazda.com/ja/" target="_blank" rel="noopener">
+                                        <div class="img">
+                                            <div class="img__inner">
+                                                <img src="img/participant/mazda_logo.jpg" width="480" height="109" alt="マツダ株式会社" loading="lazy">
+                                            </div>
+                                        </div>
+                                        <p>マツダ株式会社</p>
+                                    </a>
+                                </li>
+                                <li class="participant__item">
+                                    <a href="https://rejoui.co.jp/" target="_blank" rel="noopener">
+                                        <div class="img">
+                                            <div class="img__inner">
+                                                <img src="img/participant/rejoui_logo.jpg" width="361" height="94" alt="株式会社Rejoui" loading="lazy">
+                                            </div>
+                                        </div>
+                                        <p>株式会社Rejoui</p>
+                                    </a>
+                                </li>
+                                
+                            </ul>
+                        </div>
+                        <div class="participant__content">
+                            <h3>行政・教育会員</h3>
+                            <ul class="participant__list">
+                                <li class="participant__item">
+                                    <a href="https://www.pref.hiroshima.lg.jp/" target="_blank" rel="noopener">
+                                        <div class="img">
+                                            <div class="img__inner">
+                                                <img src="img/participant/hiroshimaken_logo.jpg" width="109" height="109" alt="広島県" loading="lazy">
+                                            </div>
+                                        </div>
+                                        <p>広島県・広島県教育委員会</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div><!-- #participant -->
+            </div>
+        </div><!-- #consortium -->
+
+        <div id="faq">
+            <div class="faq__inner">
+                <div class="faq__title">
+                    <em class="TextTyping">FAQ</em>
+                    <h2>よくあるご質問</h2>
+                </div>
+                <div class="faq__contents">
+                    <h3>全般</h3>
+                    <dl class="faq__box">
+                        <dt><span>ひろしまAI部とは何ですか。</span></dt>
+                        <dd>高校生を対象に、課外活動等を通して、企業の社員等がコーチとしてAIの基礎を教えることで、社会や企業の課題解決にテクノロジーを活用できる人材を育成する教育プログラムです。オンデマンド講座、コーチセッション、HIROSHIMA AI PITCH、AIチャレンジ等のプログラムを行っています。活動期間は6月から翌3月までになります。</dd>
+                    </dl>
+                    <dl class="faq__box">
+                        <dt><span>ひろしまAI部は誰が運営しているのですか。</span></dt>
+                        <dd>産学官で構成する「ひろしまAI部運営コンソーシアム」が運営しています。<br>（事務局：ひろぎんエリアデザイン株式会社）</dd>
+                    </dl>
+                    <dl class="faq__box">
+                        <dt><span>ひろしまAI部を取材したいのですがどうすればよいですか。</span></dt>
+                        <dd>ひろしまAI部ホームページのお問い合わせフォームから、「<a href="#footer">取材依頼</a>」を選択のうえお問い合わせください。事務局からご連絡させていただきます。</dd>
+                    </dl>
+                </div>
+                <div class="faq__contents">
+                    <h3>【高校生・高等専門学生向け】<br>ひろしまAI部への入部について</h3>
+                    <dl class="faq__box">
+                        <dt><span>ひろしまAI部に入部するための手続きを教えてください。</span></dt>
+                        <dd>在籍している高校・高等専門学校経由での入部となりますので、まずは先生に相談してください。<br>先生は、ひろしまAI部ホームページのお問い合わせフォームから、「<a href="#footer">活動への参加希望（学校担当者から）</a>」を選択のうえお問い合わせください。事務局から詳しい説明と必要な手続きについてご案内します。</dd>
+                    </dl>
+                    <dl class="faq__box">
+                        <dt><span>個人で入部はできますか。</span></dt>
+                        <dd>学校単位での入部になりますので、学校の先生に相談してください。</dd>
+                    </dl>
+                    <dl class="faq__box">
+                        <dt><span>活動期間の途中でも入部はできますか。</span></dt>
+                        <dd>入部できます。活動開始時期によっては、HIROSHIMA AI PITCHには参加できない可能性があります。その場合は、オンデマンド講座やワークショップ等のイベントへの参加は可能です。</dd>
+                    </dl>
+                    <dl class="faq__box">
+                        <dt><span>小・中学生でも入部はできますか。</span></dt>
+                        <dd>ごめんなさい。高校生・高等専門学生になってから入部してください。</dd>
+                    </dl>
+                    <dl class="faq__box">
+                        <dt><span>部費（参加費等）は必要ですか。</span></dt>
+                        <dd>原則として必要ありません。</dd>
+                    </dl>
+                    <dl class="faq__box">
+                        <dt><span>パソコンやネットワーク環境を自分で用意する必要がありますか。</span></dt>
+                        <dd>学校備品等の利用を想定していますので用意は不要です。不足する場合は事務局から学校へ提供を検討します。</dd>
+                    </dl>
+                    <dl class="faq__box">
+                        <dt><span>すべてのプログラムに参加する必要があるのですか。</span></dt>
+                        <dd>プログラムへの参加は任意です。</dd>
+                    </dl>
+                    <dl class="faq__box">
+                        <dt><span>AIの知識がないのですが大丈夫でしょうか</span></dt>
+                        <dd>AIの基礎を学ぶプログラムとなっていますので、AIに興味があれば大丈夫です。</dd>
+                    </dl>
+                </div>
+                <div class="faq__contents">
+                    <h3>【企業・団体向け】<br>ひろしまAI部運営コンソーシアムへの参画について</h3>
+                    <dl class="faq__box">
+                        <dt><span>コンソーシアムの目的を教えてください</span></dt>
+                        <dd>生成AIの出現に代表されるデジタル技術の急激な進展に伴い、デジタル人材の育成が急務となっている中、育成の裾野を広げるべく、専門的な高等教育よりも早期の段階から高校生等の若者がAI等に触れ、当然の素養として活用できる機会を、産学官の協働により「ひろしまAI部」として提供することで、デジタル・リテラシーの底上げを図り、社会や企業の課題解決にテクノロジーを活用できる、将来の産業人材の育成・確保に資することを目的としています。</dd>
+                    </dl>
+                    <dl class="faq__box">
+                        <dt><span>ひろしまAI部運営コンソーシアムに参画するにはどのような手続きが必要ですか</span></dt>
+                        <dd>ひろしまAI部ホームページのお問い合わせフォームから、「<a href="#footer">運営コンソへの加入希望（企業等担当者から）</a>」を選択のうえお問い合わせください。事務局から詳しい説明と必要な手続きについてご案内します。</dd>
+                    </dl>
+                    <dl class="faq__box">
+                        <dt><span>コンソーシアムの参画要件を教えてください</span></dt>
+                        <dd>コンソーシアムの趣旨に賛同いただき、積極的に事業を推進する意思のある企業・団体で、会長の承認が得られた場合に参画いただけます。</dd>
+                    </dl>
+                    <dl class="faq__box">
+                        <dt><span>広島県外の企業・団体でもコンソーシアムに参加できますか</span></dt>
+                        <dd>参画いただけます。</dd>
+                    </dl>
+                    <dl class="faq__box">
+                        <dt><span>参画に必要な費用負担などはありますか。</span></dt>
+                        <dd>当面の間は会費の徴収は行いません。</dd>
+                    </dl>
+                    <dl class="faq__box">
+                        <dt><span>コーチ派遣や企業訪問等の実施は必ず必要ですか。</span></dt>
+                        <dd>必須ではありませんが、そのほかひろしまAI部の目的に資するご提案があれば、事務局までお知らせください。</dd>
+                    </dl>
+                </div>
+            </div>
+        </div><!-- #faq -->
+    </main>
+    <footer id="footer" class="footer">
+        <div class="footer__inner">
+            <dl>
+                <dt>運営・事務局</dt>
+                <dd>
+                    <p>ひろしまAI部運営コンソーシアム<br>（ひろぎんエリアデザイン株式会社内）</p>
+                    <p><a href="https://forms.gle/aVz2Urmz8gpUCmmv9" target="_blank" rel="noopener" class="contact"><span>お問い合わせはこちら</span></a></p>
+                    <p><a href="https://portal.hiroshima-aiclub.org" target="_blank" rel="noopener" class="login"><span>ひろしまAI部メンバー専用サイト<br>【ログイン】</span></a></p>
+                </dd>
+            </dl>
+        </div>
+        <div class="copyright">&copy; ひろしまAI部運営コンソーシアム</div>
+    </footer><!-- #footer -->
+    <a href="#footer" class="fixed-cv">
+        <span>お問い合わせは<br>こちら</span>
+    </a>
+    <script>
+        // 右クリック禁止
+        document.oncontextmenu = function () {return false;}
+        // コピーを禁止
+        document.oncopy = function() {return false;}
+    </script>
+ 
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var btn = document.querySelector('.header__menu .btn');
+            var menuList = document.querySelector('.header__menu__list');
+            
+            // メニューボタンのクリックイベント
+            btn.addEventListener('click', function() {
+                if (menuList.classList.contains('active')) {
+                    menuList.classList.remove('active');
+                    btn.classList.remove('active');
+                    document.documentElement.style.overflow = 'auto';
+                } else {
+                    menuList.classList.add('active');
+                    btn.classList.add('active');
+                    document.documentElement.style.overflow = 'hidden';
+                }
+            });
+            
+            // メニュー内のaタグに対するクリックイベント
+            var links = document.querySelectorAll('.header__menu__list a');
+            links.forEach(function(link) {
+                link.addEventListener('click', function(event) {
+                    let hash = this.getAttribute('href');
+                    
+                    // ページ内リンクかどうかを判別
+                    if (hash.startsWith('#') && document.querySelector(hash)) {
+                        // デフォルトのアンカー動作をキャンセル
+                        event.preventDefault();
+                        
+                        // URLのハッシュを削除
+                        history.pushState("", document.title, window.location.pathname + window.location.search);
+                        
+                        // 対象のアンカーポイントへスムーズにスクロールする
+                        let target = document.querySelector(hash);
+                        window.scrollTo({
+                            top: target.offsetTop,
+                            behavior: 'smooth'
+                        });
+                        
+                        // メニューからactiveクラスを削除
+                        if (menuList.classList.contains('active')) {
+                            menuList.classList.remove('active');
+                            btn.classList.remove('active');
+                            document.documentElement.style.overflow = 'auto';
+                        }
+                    } else {
+                        // ページ外リンクの場合は通常の動作を行う
+                        return;
+                    }
+                });
+            });
+        });            
+    </script>
+    
+    <script>
+        // スクロールイベントを監視する
+        window.addEventListener('scroll', function() {
+            // .about セクションの要素を取得
+            var aboutElement = document.querySelector('.about');
+            
+            // .logo の要素を取得
+            var logoElement = document.querySelector('.header__logo');
+        
+            // .about セクションの位置を取得（ビューポートの上からの距離）
+            var aboutPosition = aboutElement.getBoundingClientRect().top;
+        
+            // .about セクションがビューポートの上部に達したかどうかをチェック
+            if (aboutPosition <= 0) {
+                // .active クラスを .logo に追加
+                logoElement.classList.add('active');
+            } else {
+                // スクロールアップ時に .active クラスを削除
+                logoElement.classList.remove('active');
+            }
+        });
+    </script>
+    
+    <!-- Initialize Swiper -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const newsSwiper = new Swiper('.news__list-swiper', {
+                slidesPerView: 3,
+                speed: 300,
+                loop: false,
+                breakpoints: {
+                    200: {
+                      slidesPerView: 1,
+                    },
+                    768: {
+                      slidesPerView: 2,
+                    },
+                    960: {
+                      slidesPerView: 3,
+                    }
+                },
+                navigation: {
+                  nextEl: '.news-swiper-button-next',
+                  prevEl: '.news-swiper-button-prev',
+                },
+            });
+            const logoSwiper = new Swiper('.logo-swiper', {
+                slidesPerView: 1,
+                loop: true,
+                speed: 20000,
+                autoplay: {
+                    delay: 0
+                },
+                allowTouchMove: false,
+                breakpoints: {
+                    200: {
+                      slidesPerView: 0.5,
+                    },
+                    768: {
+                      slidesPerView: 1,
+                    }
+                }
+            });
+            const memberSwiper = new Swiper('.member-swiper', {
+                slidesPerView: 4.5,
+                spaceBetween: 30,
+                centeredSlides: true,
+                loop: true,
+                autoplay: {
+                    delay: 0,
+                    pauseOnMouseEnter: true,
+                    disableOnInteraction: false,
+                },
+                speed: 5000,
+                breakpoints: {
+                    0: {
+                        autoplay: 3000, // Autoplayを無効にする
+                        slidesPerView: 1.2,
+                        speed: 300,
+                    },
+                    600: {
+                        autoplay: 3000, // Autoplayを無効にする
+                        slidesPerView: 1.4,
+                        speed: 300,
+                    },
+                    768: {
+                        autoplay: 3000, // Autoplayを無効にする
+                        slidesPerView: 1.6,
+                        speed: 300,
+                    },
+                    960: {
+                        autoplay: {
+                            delay: 0,
+                            disableOnInteraction: false,
+                        },
+                        slidesPerView: 2.2,
+                    },
+                    1200: {
+                        slidesPerView: 3.2,
+                    },
+                    1500: {
+                        slidesPerView: 4,
+                    }
+                },
+                navigation: {
+                    nextEl: '.member-swiper-button-next',
+                    prevEl: '.member-swiper-button-prev',
+                },
+                scrollbar: {
+                    el: '.member-swiper-scrollbar',
+                },
+            });
+            const coachSwiper = new Swiper('.coach-swiper', {
+                slidesPerView: 5.5,
+                spaceBetween: 20,
+                centeredSlides: true,
+                loop: true,
+                autoplay: {
+                    delay: 0,
+                    pauseOnMouseEnter: true,
+                    disableOnInteraction: false,
+                },
+                speed: 5000,
+                breakpoints: {
+                    0: {
+                        autoplay: 3000, // Autoplayを無効にする
+                        slidesPerView: 1.2,
+                        speed: 300,
+                    },
+                    640: {
+                        autoplay: 3000, // Autoplayを無効にする
+                        slidesPerView: 1.6,
+                        speed: 300,
+                    },
+                    768: {
+                        autoplay: 3000, // Autoplayを無効にする
+                        slidesPerView: 2.4,
+                        speed: 300,
+                    },
+                    960: {
+                        autoplay: {
+                            delay: 0,
+                            disableOnInteraction: false,
+                        },
+                        slidesPerView: 2.8,
+                    },
+                    1200: {
+                        slidesPerView: 3.6,
+                    },
+                    1500: {
+                        slidesPerView: 4.5,
+                    }
+                },
+                navigation: {
+                    nextEl: '.coach-swiper-button-next',
+                    prevEl: '.coach-swiper-button-prev',
+                },
+                scrollbar: {
+                    el: '.coach-swiper-scrollbar',
+                },
+            });
+            // document.getElementById('totalMembers').textContent = memberSwiper.slides.length;
+        });
+    </script>
+
+    <script>
+        // 追従のポヨン出現js
+        document.addEventListener("DOMContentLoaded", function() {
+            function activateElement() {
+                var element = document.querySelector(".fixed-cv");
+                if (element) {
+                    element.classList.add("arrival");
+                    setTimeout(function() {
+                        element.classList.add("active");
+                    }, 600); // 1000ミリ秒 = 1秒
+                }
+            }
+            
+            function deactivateElement() {
+                var element = document.querySelector(".fixed-cv");
+                if (element) {
+                    element.classList.remove("arrival");
+                    element.classList.remove("active");
+                }
+            }
+            
+            // 動画終了時に .arrival クラスを追加
+            document.getElementById('fvVideo').addEventListener('ended', function() {
+                activateElement();
+            });
+            
+            // スクロールイベントをリスンして #footer の位置をチェック
+            window.addEventListener("scroll", function() {
+                var footer = document.querySelector("#footer");
+                var element = document.querySelector(".fixed-cv");
+                
+                if (footer && element) {
+                    var footerRect = footer.getBoundingClientRect();
+                    var windowHeight = window.innerHeight;
+                    
+                    // #footer が画面内に入ったらクラスを削除
+                    if (footerRect.top <= windowHeight && footerRect.bottom >= 0) {
+                        deactivateElement();
+                    } else {
+                        // #footer が画面から消えたら再度クラスを追加
+                        if (!element.classList.contains("arrival")) {
+                            activateElement();
+                        }
+                    }
+                }
+            });
+        });
+
+        // スクロールで画面にインしたら要素が表示されるjs
+        $(document).ready(function() {
+            $(window).scroll(function() {
+                // .about__svgの位置が400pxに到達したら.activeを追加
+                $('.about').each(function() {
+                    const linkPos = $(this).offset().top + 400; // 要素の位置 + 400px
+                    const scroll = $(window).scrollTop(); // 現在のスクロール位置
+                    const windowHeight = $(window).height(); // ウィンドウの高さ
+        
+                    if (scroll >= linkPos - windowHeight && !$(this).hasClass('active')) {
+                        $(this).addClass('active');
+                    }
+                });
+
+                $('.news__list-img').each(function() {
+                    const elemPos = $(this).offset().top + 400; // 要素の位置 + 400px
+                    const scroll = $(window).scrollTop(); // 現在のスクロール位置
+                    const windowHeight = $(window).height(); // ウィンドウの高さ
+                    const listItems = $(this).find('.swiper-slide'); // liタグを取得
+        
+                    if (scroll >= elemPos - windowHeight && !$(this).hasClass('active')) {
+                        listItems.each(function(index) {
+                            setTimeout(() => {
+                                $(this).addClass('active');
+                            }, index * 150); // 0.15秒間隔で.activeを追加
+                        });
+                        $(this).addClass('active'); // 一度だけ追加するため
+                    }
+                });
+        
+                // .news__linkの位置が400pxに到達したら.activeを追加
+                // $('.news__link').each(function() {
+                //     const linkPos = $(this).offset().top + 400; // 要素の位置 + 400px
+                //     const scroll = $(window).scrollTop(); // 現在のスクロール位置
+                //     const windowHeight = $(window).height(); // ウィンドウの高さ
+        
+                //     if (scroll >= linkPos - windowHeight && !$(this).hasClass('active')) {
+                //         $(this).addClass('active');
+                //     }
+                // });
+
+                // .program__listの位置が400pxに到達したら.activeを追加
+                // $('.program__list').each(function() {
+                //     const linkPos = $(this).offset().top + 400; // 要素の位置 + 400px
+                //     const scroll = $(window).scrollTop(); // 現在のスクロール位置
+                //     const windowHeight = $(window).height(); // ウィンドウの高さ
+        
+                //     if (scroll >= linkPos - windowHeight && !$(this).hasClass('active')) {
+                //         $(this).addClass('active');
+                //     }
+                // });
+
+                // .coach__listの位置が400pxに到達したら.activeを追加
+                $('.coach__list').each(function() {
+                    const linkPos = $(this).offset().top + 400; // 要素の位置 + 400px
+                    const scroll = $(window).scrollTop(); // 現在のスクロール位置
+                    const windowHeight = $(window).height(); // ウィンドウの高さ
+                    
+                    if (scroll >= linkPos - windowHeight && !$(this).hasClass('active')) {
+                        $(this).addClass('active');
+                        const listItems = this.querySelectorAll("li");
+                        listItems.forEach((item, index) => {
+                            item.style.transitionDelay = `${index * 0.1}s`;
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+    
+    <script>
+        $(document).ready(function() {
+
+            // jQueryで監視している部分にアニメーション設定を追加
+            $(window).on('scroll', function() {
+                $('.program__list').each(function() {
+                    const linkPos = $(this).offset().top + 400; // 要素の位置 + 400px
+                    const scroll = $(window).scrollTop(); // 現在のスクロール位置
+                    const windowHeight = $(window).height(); // ウィンドウの高さ
+                    
+                    if (scroll >= linkPos - windowHeight && !$(this).hasClass('active')) {
+                        $(this).addClass('active');
+                    }
+                });
+            });
+            
+            // ユーティリティ関数
+            const createElementsWithClass = (count, tagName, className) => {
+                return Array.from({ length: count }, () => {
+                    const elem = document.createElement(tagName);
+                    elem.classList.add(className);
+                    return elem;
+                });
+            };
+            
+            const appendAll = (parent, children) => {
+                children.forEach(child => parent.appendChild(child));
+            };
+            
+            const removeAll = (elements) => {
+                elements.forEach(element => element.remove());
+            };
+        });
+    </script>
+
+    <script>
+        // TextTypingというクラス名がついている子要素（span）を表示から非表示にする定義
+        function TextTypingAnime() {
+            $('.TextTyping').each(function () {
+                var elemPos = $(this).offset().top + 200;
+                var scroll = $(window).scrollTop();
+                var windowHeight = $(window).height();
+                var thisChild = $(this).children(); // spanタグを取得
+                if (scroll >= elemPos - windowHeight && !$(this).hasClass('end')) {
+                    // まだ.endが追加されていない場合のみアニメーションを実行
+                    var totalChildren = thisChild.length;
+                    var displayedCount = 0;
+        
+                    thisChild.each(function (i) {
+                        var time = 200;
+                        $(this).delay(time * i).fadeIn(time, function () {
+                            displayedCount++;
+                            if (displayedCount === totalChildren) {
+                                $(this).parent().addClass('end'); // 全ての子要素が表示されたら.endを追加
+                            }
+                        });
+                    });
+                }
+            });
+        }
+        // 画面をスクロールをしたら動かしたい場合の記述
+        $(window).scroll(function () {
+            TextTypingAnime(); // アニメーション用の関数を呼ぶ
+        });
+        
+        // 画面が読み込まれたらすぐに動かしたい場合の記述
+        $(window).on('load', function () {
+            // spanタグを追加する
+            var element = $(".TextTyping");
+            element.each(function () {
+                var text = $(this).html();
+                var textbox = "";
+                text.split('').forEach(function (t) {
+                    if (t !== " ") {
+                        textbox += '<span>' + t + '</span>';
+                    } else {
+                        textbox += t;
+                    }
+                });
+                $(this).html(textbox);
+            });
+        
+            TextTypingAnime(); // アニメーション用の関数を呼ぶ
+        });
+    </script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const qaItems = document.querySelectorAll(".faq__box dt"); // 全てのfaq__box dt要素を取得
+
+            function acToggle() { // クリック時に発火する関数を作成
+                const dl = this.parentElement; // dt要素の親のdl要素を取得し変数に格納
+                dl.classList.toggle('active'); // dl要素にactiveクラスをつけ外し
+            }
+
+            qaItems.forEach(function(qa) {
+                qa.addEventListener("click", acToggle); // クリックイベントを登録、acToggle関数を発火
+            });
+        });
+    </script>
+
+</body>
+</html>
