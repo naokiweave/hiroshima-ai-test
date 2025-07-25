@@ -2024,7 +2024,25 @@ dd,
     top: -20px;
     right: -60px;
   }
+.img-pc,
+.img-sp {
+  width: 100%;
+  height: auto;
 }
+
+.img-sp {
+  display: none;
+}
+
+@media (max-width: 640px) {
+  .img-pc {
+    display: none;
+  }
+  .img-sp {
+    display: block;
+  }
+}
+
 
 #member {
   width: 100%;
